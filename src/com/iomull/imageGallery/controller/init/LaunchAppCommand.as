@@ -15,6 +15,7 @@ package com.iomull.imageGallery.controller.init
 		override public function execute():void
 		{
 			viewAppModel.createApplication(contextView);
+			viewAppModel.addBuildVersionLayer();
 		}
 		
 	}
