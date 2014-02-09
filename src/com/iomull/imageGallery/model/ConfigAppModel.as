@@ -1,5 +1,6 @@
 package com.iomull.imageGallery.model 
 {
+	import com.demonsters.debugger.MonsterDebugger;
 	import com.iomull.imageGallery.model.vo.ImagePathVO;
 	import org.robotlegs.mvcs.Actor;
 	
@@ -9,29 +10,30 @@ package com.iomull.imageGallery.model
 	 */
 	public class ConfigAppModel extends Actor 
 	{
-		public var buildID		:String = "000001";
+		public var buildID:		String = "000001";
+		public var xmlPath:		String = "../assets/gallery.xml";
 		
-		public var pathes:Vector.<ImagePathVO>
+		public var pathes:Vector.<ImagePathVO>;
 		
 		public function ConfigAppModel() 
 		{
 		
 		}
 		
-		public function parseXML(xml:XML): void
+		public function parseXML(imageXML:XML): void
 		{
 			pathes = new Vector.<ImagePathVO>();
 			
-			//parse xml
-			//for{var ibla-bla
-				
-			/*var imagePathVO:ImagePathVO = new ImagePathVO(xml[i].@small, xml[i].@big);
-			pathes.push(imagePathVO);*/
-				
-			//}
+			const imageXMLList:XMLList = imageXML.children();
+			
+			for each (var image:XML in imageXMLList) 
+			{
+				var imagePathVO:ImagePathVO = new ImagePathVO( image.@name, image.@small, image.@big );
+				pathes.push(imagePathVO);
+				trace(imagePathVO.name, imagePathVO.small, imagePathVO.big);
+			}
 			
 			//dispatchsignalParseComplete //craate commant start load images
-				//ParseComplete  - це команда там inject.configModel(); загружаю всы маленьки крим першои и посылаю лоадер посилае в ImageVo
 		}
 	}
 

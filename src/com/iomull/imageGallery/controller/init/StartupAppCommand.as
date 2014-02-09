@@ -1,7 +1,10 @@
 package com.iomull.imageGallery.controller.init 
 {
+	import com.iomull.imageGallery.controller.load.ImageXMLLoadedCommand;
 	import com.iomull.imageGallery.model.ConfigAppModel;
 	import com.iomull.imageGallery.model.ViewAppModel;
+	import com.iomull.imageGallery.service.LoaderAppGallery;
+	import com.iomull.imageGallery.signals.ImageXMLLoadedSignal;
 	import com.iomull.imageGallery.signals.LaunchAppSignal;
 	import com.iomull.imageGallery.signals.StartupAppCompleteSignal;
 	import com.iomull.imageGallery.view.BuildVersionView;
@@ -25,8 +28,10 @@ package com.iomull.imageGallery.controller.init
 
 			injector.mapSingleton(ConfigAppModel);
 			injector.mapSingleton(ViewAppModel);
+			injector.mapSingletonOf(LoaderAppGallery, LoaderAppGallery);
 						
-			signalCommandMap.mapSignalClass(LaunchAppSignal, LaunchAppCommand);
+			signalCommandMap.mapSignalClass(LaunchAppSignal, LaunchAppCommand, true);
+			signalCommandMap.mapSignalClass(ImageXMLLoadedSignal, ImageXMLLoadedCommand, true);
 			
 			mediatorMap.mapView(BuildVersionView, BuildVersionMediator, BuildVersionView);
 			
