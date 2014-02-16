@@ -6,6 +6,8 @@ package com.iomull.imageGallery.constant
 	 */
 	public class LoadName
 	{
-		static public var imageXML: String = "ImageXML";
+		static public var IMAGE_XML: String = "LoadName.ImageXML";
+		static public var IMAGES: String = "LoadName.IMAGES";
+		static public var LOADER: String = "LoadName.LOADER";
 	}
 }

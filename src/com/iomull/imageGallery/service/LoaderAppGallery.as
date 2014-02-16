@@ -1,10 +1,14 @@
 package com.iomull.imageGallery.service
 {
 	import com.greensock.events.LoaderEvent;
+	import com.greensock.loading.display.ContentDisplay;
 	import com.greensock.loading.ImageLoader;
 	import com.greensock.loading.LoaderMax;
 	import com.greensock.loading.XMLLoader;
+	import com.greensock.TweenLite;
+	import com.iomull.imageGallery.constant.LoadName;
 	import com.iomull.imageGallery.constant.LoadType;
+	import flash.display.Bitmap;
 	import flash.utils.Dictionary;
 	import org.osflash.signals.Signal;
 	import org.robotlegs.mvcs.Actor;
@@ -19,23 +23,25 @@ package com.iomull.imageGallery.service
 		
 		public function LoaderAppGallery()
 		{
-			_loader = new LoaderMax({name: "loaderAppGallery", onProgress: progressHandler, onComplete: completeHandler, onError: errorHandler});
+			_loader = new LoaderMax({name: LoadName.LOADER, onProgress: progressHandler, onComplete: completeHandler, onError: errorHandler});
 			_signalMap = new Dictionary();
 		}
 		
 		public function addData(type:String, name:String, url:String, signal:Signal=null):void
-		{
-			if (signal)
-				_signalMap[name] = signal;
+		{	
+			mapSignal(name, signal);
 			
 			if (type == LoadType.XML)
-				_loader.append(new XMLLoader(url, {name: name, onComplete: completeXMLHandler, autoDispose : true}));
+				_loader.append(new XMLLoader(url, {name: name, onComplete: completeContectHandler, autoDispose : false}));
 			else if (type == LoadType.IMG)
-				_loader.append(new ImageLoader(url, {name: name, onComplete: completeIMGHandler, autoDispose : true}));
+				_loader.append(new ImageLoader(url, {name: name, onComplete: completeContectHandler, autoDispose : false}));
 		}
 		
-		public function load():void
+		public function load(name:String= null, signal:Signal=null):void
 		{
+			if (name)
+				_loader.name = name;
+			mapSignal(name, signal);
 			_loader.load();
 		}
 		
@@ -45,13 +51,30 @@ package com.iomull.imageGallery.service
 			return xml;
 		}
 		
-		//public function getImage(name:String):XML  
-		//{
-			//const xml:XML = _loader.getContent(name) as XML
-			//return xml;
-		//}
+		public function getImage(name:String):ContentDisplay  
+		{
+			const image:ContentDisplay = _loader.getContent(name) as ContentDisplay;
+			return image;
+		}
 		
-		private function completeXMLHandler(e:LoaderEvent):void
+		public function dispose():void
+		{
+			//_loader.dispose(true);
+			//_signalMap = new Dictionary();
+			_loader.unload();
+		}
+		
+		private function mapSignal(name:String= null, signal:Signal=null):void
+		{
+			if (name && signal)
+			{
+				if (_signalMap[name])
+					_signalMap[name] = null;
+				_signalMap[name] = signal;
+			}
+		}
+		
+		private function completeHandler(e:LoaderEvent):void
 		{
 			trace(e.target + " is complete!");
 			
@@ -60,9 +83,9 @@ package com.iomull.imageGallery.service
 				signal.dispatch();
 		}
 		
-		private function completeIMGHandler(e:LoaderEvent):void
+		private function completeContectHandler(e:LoaderEvent):void
 		{
-			trace(e.target + " is complete!");
+			//trace(e.target + " is complete!");
 			
 			var signal:Signal = _signalMap[e.target.name]
 			if (signal)
@@ -71,12 +94,7 @@ package com.iomull.imageGallery.service
 		
 		private function progressHandler(e:LoaderEvent):void
 		{
-			trace("progress: " + e.target.progress);
-		}
-
-		private function completeHandler(e:LoaderEvent):void
-		{
-			trace(e.target + " is complete!");
+			//trace("progress: " + e.target.progress);
 		}
 		
 		private function errorHandler(e:LoaderEvent):void

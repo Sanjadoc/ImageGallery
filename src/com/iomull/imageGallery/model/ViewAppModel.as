@@ -1,6 +1,6 @@
 package com.iomull.imageGallery.model 
 {
-	import com.iomull.imageGallery.view.BuildVersionView;
+	import com.iomull.imageGallery.view.BigContainer;
 	import flash.display.DisplayObjectContainer;
 	import flash.display.Sprite;
 	import org.robotlegs.mvcs.Actor;
@@ -13,29 +13,21 @@ package com.iomull.imageGallery.model
 	{
 		private var contextView:DisplayObjectContainer;
 		
-		public var resizableContainer:Sprite;
-		
-		private var buildVersion:BuildVersionView;
+		private var bigContainer:BigContainer;
 		
 		public function createApplication(contextView:DisplayObjectContainer):void
 		{
 			this.contextView = contextView;
-			addResizableContainer();
+			addBigContainer();
 		}
 		
-		public function addResizableContainer():void
+		public function addBigContainer():void
 		{
-			resizableContainer = new Sprite();
-			resizableContainer.graphics.clear();
-			
-			contextView.addChild(resizableContainer);
-		}
-		
-		public function addBuildVersionLayer():void
-		{
-			buildVersion = new BuildVersionView();
-			buildVersion.name = "buildVersion";
-			resizableContainer.addChild(buildVersion);
+			bigContainer = new BigContainer();
+			bigContainer.name = "bigContainer";
+			bigContainer.x = (contextView.stage.stageWidth - 400) >> 1;
+			bigContainer.y = 40;
+			contextView.addChild(bigContainer);
 		}
 		
 	}

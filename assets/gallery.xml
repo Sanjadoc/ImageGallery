@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <images>
-	<image name="image1"  small="../assets/images/1_s.jpg" big="../assets/images/1_s.jpg"/>
-	<image name="image2"  small="../assets/images/2_s.jpg" big="../assets/images/2_s.jpg"/>
-	<image name="image3"  small="../assets/images/3_s.jpg" big="../assets/images/3_s.jpg"/>
-	<image name="image4"  small="../assets/images/4_s.jpg" big="../assets/images/4_s.jpg"/>
-	<image name="image5"  small="../assets/images/5_s.jpg" big="../assets/images/5_s.jpg"/>
-	<image name="image6"  small="../assets/images/6_s.jpg" big="../assets/images/6_s.jpg"/>
-	<image name="image7"  small="../assets/images/7_s.jpg" big="../assets/images/7_s.jpg"/>
-	<image name="image8"  small="../assets/images/8_s.jpg" big="../assets/images/8_s.jpg"/>
+	<image name="image1"  small="../assets/images/1_s.jpg" big="../assets/images/1.jpg"/>
+	<image name="image2"  small="../assets/images/2_s.jpg" big="../assets/images/2.jpg"/>
+	<image name="image3"  small="../assets/images/3_s.jpg" big="../assets/images/3.jpg"/>
+	<image name="image4"  small="../assets/images/4_s.jpg" big="../assets/images/4.jpg"/>
+	<image name="image5"  small="../assets/images/5_s.jpg" big="../assets/images/5.jpg"/>
+	<image name="image6"  small="../assets/images/6_s.jpg" big="../assets/images/6.jpg"/>
+	<image name="image7"  small="../assets/images/7_s.jpg" big="../assets/images/7.jpg"/>
+	<image name="image8"  small="../assets/images/8_s.jpg" big="../assets/images/8.jpg"/>
 </images>

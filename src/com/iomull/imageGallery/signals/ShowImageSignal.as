@@ -6,13 +6,11 @@ package com.iomull.imageGallery.signals
 	 * ...
 	 * @author Oleksandr Grynivskyi
 	 */
-	public class LaunchAppSignal extends Signal 
+	public class ShowImageSignal extends Signal 
 	{
-		public function LaunchAppSignal() 
+		public function ShowImageSignal(...rest) 
 		{
 			super();
-			//trace("LaunchAppSignal ok!");
 		}
 	}
-
 }

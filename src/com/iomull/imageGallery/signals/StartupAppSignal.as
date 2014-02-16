@@ -10,7 +10,7 @@ package com.iomull.imageGallery.signals
 		public function StartupAppSignal() 
 		{
 			super();
-			trace('StartupAppSignal test ok!');
+			//trace('StartupAppSignal test ok!');
 		}
 		
 	}
