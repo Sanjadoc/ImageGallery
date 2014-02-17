@@ -11,7 +11,6 @@ package com.iomull.imageGallery.model
 	 */
 	public class ConfigAppModel extends Actor 
 	{
-		public var buildID:		String = "000001";
 		public var xmlPath:		String = "../assets/gallery.xml";
 		
 		public var pathes:Vector.<ImagePathVO>;
@@ -34,7 +33,6 @@ package com.iomull.imageGallery.model
 			{
 				var imagePathVO:ImagePathVO = new ImagePathVO( image.@name, image.@small, image.@big );
 				pathes.push(imagePathVO);	
-				//trace(imagePathVO.name, imagePathVO.small, imagePathVO.big);
 			}
 			
 			signalParseComplete.dispatch(); //craate command start load images

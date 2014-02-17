@@ -10,6 +10,7 @@ package com.iomull.imageGallery.model
 	{
 		private var _bigImages	:Vector.<int> = new Vector.<int>();
 		private var _smalImages	:Vector.<int> = new Vector.<int>();
+		private var _selectedName:String;
 		
 		
 		public function get smallImages():Vector.<int>
@@ -30,6 +31,16 @@ package com.iomull.imageGallery.model
 		public function set bigImages(value:Vector.<int>):void
 		{
 			_bigImages = value;
+		}
+		
+		public function get selectedName():String
+		{
+			return _selectedName;
+		}
+		
+		public function set selectedName(value:String):void
+		{
+			_selectedName = value;
 		}
 		
 	}

@@ -12,7 +12,7 @@ package com.iomull.imageGallery
 	 * ...
 	 * @author Oleksandr Grynivskyi
 	 */
-	[SWF(width = "800", height = "600", backgroundColor = "#001010", frameRate = "30")]
+	[SWF(width = "740", height = "500", backgroundColor = "#001010", frameRate = "30")]
 	
 	public class ImageGalleryApp extends MovieClip 
 	{

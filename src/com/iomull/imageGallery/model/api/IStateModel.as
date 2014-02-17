@@ -11,6 +11,9 @@ package com.iomull.imageGallery.model.api
 		
 		function get bigImages():Vector.<int>;
 		function set bigImages(value:Vector.<int>):void;
+		
+		function get selectedName():String;
+		function set selectedName(value:String):void;
 	}
 
 }

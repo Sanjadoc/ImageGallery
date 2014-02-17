@@ -1,5 +1,6 @@
 package com.iomull.imageGallery.controller.init 
 {
+	import com.iomull.imageGallery.controller.SelectedImagesCommand;
 	import com.iomull.imageGallery.controller.load.ImagesLoadedCommand;
 	import com.iomull.imageGallery.controller.load.ImageXMLLoadedCommand;
 	import com.iomull.imageGallery.controller.load.SignalParseCompleteCommand;
@@ -12,11 +13,14 @@ package com.iomull.imageGallery.controller.init
 	import com.iomull.imageGallery.signals.ImagesLoadedSignal;
 	import com.iomull.imageGallery.signals.ImageXMLLoadedSignal;
 	import com.iomull.imageGallery.signals.LaunchAppSignal;
+	import com.iomull.imageGallery.signals.SelectedImageSignal;
 	import com.iomull.imageGallery.signals.ShowImageSignal;
 	import com.iomull.imageGallery.signals.SignalParseComplete;
 	import com.iomull.imageGallery.signals.StartupAppCompleteSignal;
 	import com.iomull.imageGallery.view.BigContainer;
 	import com.iomull.imageGallery.view.mediator.BigContainerMediator;
+	import com.iomull.imageGallery.view.mediator.SmallContainerMediator;
+	import com.iomull.imageGallery.view.SmallContainer;
 	import flash.display.Stage;
 	import org.robotlegs.mvcs.SignalCommand;
 	/**
@@ -41,9 +45,11 @@ package com.iomull.imageGallery.controller.init
 			signalCommandMap.mapSignalClass(LaunchAppSignal, LaunchAppCommand, true);
 			signalCommandMap.mapSignalClass(ImageXMLLoadedSignal, ImageXMLLoadedCommand, true);
 			signalCommandMap.mapSignalClass(SignalParseComplete, SignalParseCompleteCommand, true);
-			signalCommandMap.mapSignalClass(ImagesLoadedSignal,ImagesLoadedCommand);
+			signalCommandMap.mapSignalClass(ImagesLoadedSignal, ImagesLoadedCommand);
+			signalCommandMap.mapSignalClass(SelectedImageSignal, SelectedImagesCommand);
 			
 			mediatorMap.mapView(BigContainer, BigContainerMediator, BigContainer);
+			mediatorMap.mapView(SmallContainer, SmallContainerMediator, SmallContainer);
 			
 			startupAppCompleteSignal.dispatch();
 		}

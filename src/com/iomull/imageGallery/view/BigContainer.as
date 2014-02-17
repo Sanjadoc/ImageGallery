@@ -1,5 +1,6 @@
 package com.iomull.imageGallery.view 
 {
+	import com.greensock.easing.Quart;
 	import com.greensock.loading.display.ContentDisplay;
 	import com.greensock.TweenLite;
 	import flash.display.Sprite;
@@ -24,7 +25,7 @@ package com.iomull.imageGallery.view
 		
 		private function removeImage():void 
 		{
-			TweenLite.to( _image , 0.5, { alpha:0, onComplete:removeImageEnd } );
+			TweenLite.to( _image , 0.5, { alpha:0, onComplete:removeImageEnd, ease:Quart.easeIn } );
 		}
 		
 		private function removeImageEnd():void 
@@ -39,7 +40,7 @@ package com.iomull.imageGallery.view
 			_image = _tempImage;
 			_image.alpha = 0;
 			this.addChild(_image);
-			TweenLite.to( _image , 0.5, { alpha:1 } );
+			TweenLite.to( _image , 0.5, { alpha:1, ease:Quart.easeIn } );
 		}
 		
 	}

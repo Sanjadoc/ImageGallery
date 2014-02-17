@@ -10,6 +10,7 @@ package com.iomull.imageGallery.model
 	public class ImageModel  extends Actor
 	{
 		public var bigImage:ContentDisplay; 
+		public var smallImages:Vector.<ContentDisplay>;
 	}
 
 }
