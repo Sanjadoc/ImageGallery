@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.iomull.imageGallery</groupId>
+    <artifactId>ImageGallery-parent</artifactId>
+    <version>1.0-Beta</version>
+	<packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+	<description>${project.artifactId}-${project.version}</description>
+
+	<properties>
+        <skip.deploy>true</skip.deploy>
+    </properties>
+	
+	 <modules>
+        <module>signals.pom.xml</module>
+        <module>signalsCommandMap.pom.xml</module>
+		<module>robotlegs-framework.pom.xml</module>
+        <module>greensock.pom.xml</module>
+        <module>monsterDebugger.pom.xml</module>
+        <module>ImageGallery.pom.xml</module>
+    </modules>
+	
+</project>

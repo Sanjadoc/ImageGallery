@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="188402" compressedSize="82425">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="445">
+      <data type="metaData" size="377"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="187957">
+      <frame name="com_iomull_imageGallery_ImageGalleryApp" size="187940" frame="1"/>
+      <frame name="imageGallery" size="17" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="187850">
+      <abc name="frame1" size="187850" frame="1"/>
+    </actionScript>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="107">
+      <tag type="symbolClass" size="46" frame="1"/>
+      <tag type="frameLabel" size="42" frame="1"/>
+      <tag type="frameLabel" size="15" frame="2"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>

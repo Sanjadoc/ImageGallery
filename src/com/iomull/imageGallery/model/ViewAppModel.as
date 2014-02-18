@@ -41,7 +41,6 @@ package com.iomull.imageGallery.model
 			smallContainer.y = 380;
 			contextView.addChild(smallContainer);
 		}
-		
 	}
 
 }

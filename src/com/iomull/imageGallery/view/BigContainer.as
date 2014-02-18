@@ -42,7 +42,6 @@ package com.iomull.imageGallery.view
 			this.addChild(_image);
 			TweenLite.to( _image , 0.5, { alpha:1, ease:Quart.easeIn } );
 		}
-		
 	}
 
 }

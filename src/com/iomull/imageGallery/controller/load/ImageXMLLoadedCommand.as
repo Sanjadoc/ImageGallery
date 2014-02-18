@@ -16,9 +16,9 @@ package com.iomull.imageGallery.controller.load
 		override public function execute():void
 		{
 			trace("ImageXMLLoadedCommand");
-			const imageXML: XML = loaderAppGallery.getXML(LoadName.IMAGE_XML);
-			loaderAppGallery.dispose();
-			configAppModel.parseXML(imageXML);
+			const imageXML: XML = loaderAppGallery.getXML(LoadName.IMAGE_XML);		
+			loaderAppGallery.dispose();												//memory cleaning								
+			configAppModel.parseXML(imageXML);									
 		}
 	}
 
