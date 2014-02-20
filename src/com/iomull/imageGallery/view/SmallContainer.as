@@ -30,6 +30,8 @@ package com.iomull.imageGallery.view
 				
 			_images = _tempImages;
 			addNewImages();
+			
+			
 		}
 		
 		private function initListener():void 
@@ -67,9 +69,8 @@ package com.iomull.imageGallery.view
 		{
 			var image:ContentDisplay = e.target as ContentDisplay;
 			clickSignal.dispatch(image.name);
-			
 			image.alpha = 0;
-			TweenLite.to( image , 0.7, { alpha:1} );
+			TweenLite.to( image , 0.1, { alpha:1 } );
 		}
 	}
 

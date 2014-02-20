@@ -25,7 +25,7 @@ package com.iomull.imageGallery.view
 		
 		private function removeImage():void 
 		{
-			TweenLite.to( _image , 0.5, { alpha:0, onComplete:removeImageEnd, ease:Quart.easeIn } );
+			TweenLite.to( _image , 0.3, { alpha:0, onComplete:removeImageEnd, ease:Quart.easeIn } );
 		}
 		
 		private function removeImageEnd():void 
@@ -40,7 +40,7 @@ package com.iomull.imageGallery.view
 			_image = _tempImage;
 			_image.alpha = 0;
 			this.addChild(_image);
-			TweenLite.to( _image , 0.5, { alpha:1, ease:Quart.easeIn } );
+			TweenLite.to( _image , 0.3, { alpha:1, ease:Quart.easeIn } );
 		}
 	}
 

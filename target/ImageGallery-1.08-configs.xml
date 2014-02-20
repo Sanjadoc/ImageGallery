@@ -490,7 +490,7 @@
    </includes>
    -->
    <!-- link-report: Output a XML-formatted report of all definitions linked into the application.-->
-   <link-report>D:\GitHub\ImageGallery\target\ImageGallery-1.07-Beta-link-report.xml</link-report>
+   <link-report>D:\GitHub\ImageGallery\target\ImageGallery-1.08-link-report.xml</link-report>
    <!-- load-config: load a file containing configuration options-->
    <!-- load-config usage:
    <load-config>filename</load-config>
@@ -509,9 +509,9 @@
       <creator>name</creator>
       -->
       <!-- metadata.date: The creation date to store in the SWF metadata-->
-      <date>19.02.14 1:47</date>
+      <date>20.02.14 2:12</date>
       <!-- metadata.description: The default description to store in the SWF metadata-->
-      <description>ImageGallery-1.07-Beta</description>
+      <description>ImageGallery-1.08</description>
       <!-- metadata.language: The language to store in the SWF metadata (i.e. EN, FR)-->
       <language>en_US</language>
       <!-- metadata.localized-description: A localized RDF/XMP description to store in the SWF metadata-->
@@ -538,7 +538,7 @@
       <title>ImageGallery</title>
    </metadata>
    <!-- output: the filename of the SWF movie to create-->
-   <output>D:\GitHub\ImageGallery\target\ImageGallery-1.07-Beta.swf</output>
+   <output>D:\GitHub\ImageGallery\target\ImageGallery-1.08.swf</output>
    <!-- raw-metadata: XML text to store in the SWF metadata (overrides metadata.* configuration)-->
    <!-- raw-metadata usage:
    <raw-metadata>text</raw-metadata>
@@ -583,7 +583,7 @@
       -->
    </runtime-shared-library-settings>
    <!-- size-report: Output an XML-formatted report detailing the size of all code and data linked into the application.-->
-   <size-report>D:\GitHub\ImageGallery\target\ImageGallery-1.07-Beta-size-report.xml</size-report>
+   <size-report>D:\GitHub\ImageGallery\target\ImageGallery-1.08-size-report.xml</size-report>
    <!-- static-link-runtime-shared-libraries: statically link the libraries specified by the -runtime-shared-libraries-path option.-->
    <static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
    <!-- swf-version: specifies the version of the compiled SWF file.-->

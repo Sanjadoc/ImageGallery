@@ -22,7 +22,7 @@ package com.iomull.imageGallery.controller.load
 		
 		override public function execute():void
 		{
-			trace("SignalParseCompleteCommand");
+			//trace("SignalParseCompleteCommand");
 			
 			//initial load content logics
 			

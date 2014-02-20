@@ -6,7 +6,7 @@
 
     <groupId>com.iomull.imageGallery</groupId>
     <artifactId>ImageGallery-parent</artifactId>
-    <version>1.0-Beta</version>
+    <version>1.08</version>
 	<packaging>pom</packaging>
     <name>${project.artifactId}</name>
 	<description>${project.artifactId}-${project.version}</description>

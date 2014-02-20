@@ -76,7 +76,7 @@ package com.iomull.imageGallery.service
 		
 		private function completeHandler(e:LoaderEvent):void
 		{
-			trace(e.target + " is complete!");
+			//trace(e.target + " is complete!");
 			
 			var signal:Signal = _signalMap[e.target.name]
 			if (signal)
@@ -99,7 +99,7 @@ package com.iomull.imageGallery.service
 		
 		private function errorHandler(e:LoaderEvent):void
 		{
-			trace("error occured with " + e.target + ": " + e.text);
+			//trace("error occured with " + e.target + ": " + e.text);
 		}
 	
 	}

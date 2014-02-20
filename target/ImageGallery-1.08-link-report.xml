@@ -11,7 +11,7 @@
       <dep id="Error" />
       <dep id="org.swiftsuspenders:Injector" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\view\SmallContainer.as" mod="1392742706247" size="1997" optimizedsize="1342">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\view\SmallContainer.as" mod="1392854897563" size="1997" optimizedsize="1342">
       <def id="com.iomull.imageGallery.view:SmallContainer" />
       <pre id="flash.display:Sprite" />
       <dep id="com.greensock.loading.display:ContentDisplay" />
@@ -164,14 +164,19 @@
       <dep id="AS3" />
       <dep id="org.robotlegs.core:ISignalCommandMap" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\SelectedImagesCommand.as" mod="1392767130125" size="922" optimizedsize="646">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\SelectedImagesCommand.as" mod="1392854770229" size="1964" optimizedsize="1446">
       <def id="com.iomull.imageGallery.controller:SelectedImagesCommand" />
       <pre id="org.robotlegs.mvcs:Command" />
+      <dep id="com.iomull.imageGallery.model.vo:ImagePathVO" />
       <dep id="com.iomull.imageGallery.service:LoaderAppGallery" />
       <dep id="com.iomull.imageGallery.model.api:IStateModel" />
       <dep id="AS3" />
       <dep id="com.iomull.imageGallery.signals:ImageXMLLoadedSignal" />
+      <dep id="__AS3__.vec:Vector" />
       <dep id="com.iomull.imageGallery.model:ConfigAppModel" />
+      <dep id="com.iomull.imageGallery.constant:LoadType" />
+      <dep id="com.iomull.imageGallery.signals:ImagesLoadedSignal" />
+      <dep id="com.iomull.imageGallery.constant:LoadName" />
       <dep id="com.iomull.imageGallery.model:ImageModel" />
     </script>
     <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\signals\LaunchAppSignal.as" mod="1392575303134" size="409" optimizedsize="243">
@@ -251,7 +256,7 @@
       <dep id="AS3" />
       <dep id="org.swiftsuspenders:Injector" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\SignalParseCompleteCommand.as" mod="1392581969026" size="1752" optimizedsize="1257">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\SignalParseCompleteCommand.as" mod="1392854790800" size="1752" optimizedsize="1257">
       <def id="com.iomull.imageGallery.controller.load:SignalParseCompleteCommand" />
       <pre id="org.robotlegs.mvcs:Command" />
       <dep id="com.iomull.imageGallery.model.vo:ImagePathVO" />
@@ -391,7 +396,7 @@
       <pre id="org.robotlegs.mvcs:Actor" />
       <dep id="AS3" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\ImageXMLLoadedCommand.as" mod="1392752777052" size="901" optimizedsize="592">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\ImageXMLLoadedCommand.as" mod="1392854784860" size="901" optimizedsize="592">
       <def id="com.iomull.imageGallery.controller.load:ImageXMLLoadedCommand" />
       <pre id="org.robotlegs.mvcs:Command" />
       <dep id="com.iomull.imageGallery.service:LoaderAppGallery" />
@@ -650,7 +655,7 @@
       <dep id="flash.events:EventDispatcher" />
       <dep id="AS3" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\service\LoaderAppGallery.as" mod="1392584374357" size="2507" optimizedsize="1408">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\service\LoaderAppGallery.as" mod="1392854807020" size="2507" optimizedsize="1408">
       <def id="com.iomull.imageGallery.service:LoaderAppGallery" />
       <pre id="org.robotlegs.mvcs:Actor" />
       <dep id="com.greensock.loading.display:ContentDisplay" />
@@ -807,7 +812,7 @@
       <pre id="Object" />
       <dep id="AS3" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\view\BigContainer.as" mod="1392746177410" size="1315" optimizedsize="846">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\view\BigContainer.as" mod="1392853634242" size="1315" optimizedsize="846">
       <def id="com.iomull.imageGallery.view:BigContainer" />
       <pre id="flash.display:Sprite" />
       <dep id="com.greensock.loading.display:ContentDisplay" />
@@ -864,7 +869,7 @@
       <dep id="com.iomull.imageGallery.signals:ImagesLoadedSignal" />
       <dep id="com.iomull.imageGallery.signals:ShowImageSignal" />
     </script>
-    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\ImagesLoadedCommand.as" mod="1392595747298" size="1502" optimizedsize="1105">
+    <script name="D:\GitHub\ImageGallery\src\com\iomull\imageGallery\controller\load\ImagesLoadedCommand.as" mod="1392854778829" size="1510" optimizedsize="1113">
       <def id="com.iomull.imageGallery.controller.load:ImagesLoadedCommand" />
       <pre id="org.robotlegs.mvcs:Command" />
       <dep id="com.iomull.imageGallery.service:LoaderAppGallery" />

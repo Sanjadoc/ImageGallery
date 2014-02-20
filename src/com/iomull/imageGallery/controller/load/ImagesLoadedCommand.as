@@ -26,12 +26,12 @@ package com.iomull.imageGallery.controller.load
 		
 		override public function execute():void
 		{
-			trace("ImagesLoadedCommand");
+			//trace("ImagesLoadedCommand");
 			
 			var index:int;
 			index = stateModel.bigImages[stateModel.bigImages.length - 1];
 			
-			var bigImage: ContentDisplay = loaderAppGallery.getImage(configAppModel.pathes[index].name);
+			var bigImage:ContentDisplay = loaderAppGallery.getImage(configAppModel.pathes[index].big);
 			imageModel.bigImage = bigImage;
 			
 			var smalImages:Vector.<ContentDisplay> =  new Vector.<ContentDisplay>();
@@ -40,11 +40,12 @@ package com.iomull.imageGallery.controller.load
 			{
 				index = stateModel.smallImages[i];
 				
-				smalImage = loaderAppGallery.getImage(configAppModel.pathes[index].name);
+				smalImage = loaderAppGallery.getImage(configAppModel.pathes[index].small);
 				smalImages.push(smalImage);
 			}
 			
 			imageModel.smallImages = smalImages;
+			
 			
 			showImageSignal.dispatch();
 		}
