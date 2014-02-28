@@ -6,7 +6,7 @@
 
     <groupId>com.iomull.imageGallery</groupId>
     <artifactId>ImageGallery-parent</artifactId>
-    <version>1.08</version>
+    <version>1.09</version>
 	<packaging>pom</packaging>
     <name>${project.artifactId}</name>
 	<description>${project.artifactId}-${project.version}</description>
@@ -21,6 +21,7 @@
 		<module>robotlegs-framework.pom.xml</module>
         <module>greensock.pom.xml</module>
         <module>monsterDebugger.pom.xml</module>
+		
         <module>ImageGallery.pom.xml</module>
     </modules>
 	

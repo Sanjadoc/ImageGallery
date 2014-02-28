@@ -34,14 +34,13 @@
       <defaults-css-url>string</defaults-css-url>
       -->
       <!-- compiler.define: define a global AS3 conditional compilation definition, e.g. -define=CONFIG::debugging,true or -define+=CONFIG::debugging,true (to append to existing definitions in flex-config.xml) -->
+      <!-- compiler.define usage:
       <define>
-         <name>CONFIG::debug</name>
-         <value>false</value>
+         <name>string</name>
+         <value>string</value>
+         <value>string</value>
       </define>
-      <define>
-         <name>CONFIG::localurls</name>
-         <value>false</value>
-      </define>
+      -->
       <!-- compiler.enable-runtime-design-layers usage:
       <enable-runtime-design-layers>boolean</enable-runtime-design-layers>
       -->
@@ -178,6 +177,9 @@
       </library-path>
       <library-path>
          <path-element>C:\Users\SANJADOC\.m2\repository\com\iomull\imageGallery\monsterDebugger\3.0\monsterDebugger-3.0.swc</path-element>
+      </library-path>
+      <library-path>
+         <path-element>C:\Users\SANJADOC\.m2\repository\com\adobe\flexunit\flexunit\4.0-rc-1\flexunit-4.0-rc-1.swc</path-element>
       </library-path>
       <library-path>
          <path-element>C:\Users\SANJADOC\.m2\repository\com\adobe\flex\framework\advancedgrids\4.6.b.23201\advancedgrids-4.6.b.23201-en_US.rb.swc</path-element>
@@ -465,10 +467,12 @@
    -->
    <frames>
       <!-- frames.frame: A SWF frame label with a sequence of classnames that will be linked onto the frame.-->
+      <!-- frames.frame usage:
       <frame>
-         <label>imageGallery</label>
-         <classname>com.iomull.imageGallery.ImageGalleryApp</classname>
+         <label>string</label>
+         <classname>string</classname>
       </frame>
+      -->
    </frames>
    <framework>halo</framework>
    <!-- include-inheritance-dependencies-only: only include inheritance dependencies of classes specified with include-classes -->
@@ -490,7 +494,7 @@
    </includes>
    -->
    <!-- link-report: Output a XML-formatted report of all definitions linked into the application.-->
-   <link-report>D:\GitHub\ImageGallery\target\ImageGallery-1.08-link-report.xml</link-report>
+   <link-report>D:\GitHub\ImageGallery\target\ImageGallery-1.09-link-report.xml</link-report>
    <!-- load-config: load a file containing configuration options-->
    <!-- load-config usage:
    <load-config>filename</load-config>
@@ -509,9 +513,9 @@
       <creator>name</creator>
       -->
       <!-- metadata.date: The creation date to store in the SWF metadata-->
-      <date>20.02.14 2:12</date>
+      <date>28.02.14 2:57</date>
       <!-- metadata.description: The default description to store in the SWF metadata-->
-      <description>ImageGallery-1.08</description>
+      <description>ImageGallery-1.09</description>
       <!-- metadata.language: The language to store in the SWF metadata (i.e. EN, FR)-->
       <language>en_US</language>
       <!-- metadata.localized-description: A localized RDF/XMP description to store in the SWF metadata-->
@@ -538,7 +542,7 @@
       <title>ImageGallery</title>
    </metadata>
    <!-- output: the filename of the SWF movie to create-->
-   <output>D:\GitHub\ImageGallery\target\ImageGallery-1.08.swf</output>
+   <output>D:\GitHub\ImageGallery\target\ImageGallery-1.09.swf</output>
    <!-- raw-metadata: XML text to store in the SWF metadata (overrides metadata.* configuration)-->
    <!-- raw-metadata usage:
    <raw-metadata>text</raw-metadata>
@@ -583,11 +587,11 @@
       -->
    </runtime-shared-library-settings>
    <!-- size-report: Output an XML-formatted report detailing the size of all code and data linked into the application.-->
-   <size-report>D:\GitHub\ImageGallery\target\ImageGallery-1.08-size-report.xml</size-report>
+   <size-report>D:\GitHub\ImageGallery\target\ImageGallery-1.09-size-report.xml</size-report>
    <!-- static-link-runtime-shared-libraries: statically link the libraries specified by the -runtime-shared-libraries-path option.-->
    <static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
    <!-- swf-version: specifies the version of the compiled SWF file.-->
-   <swf-version>18</swf-version>
+   <swf-version>16</swf-version>
    <!-- target-player: specifies the version of the player the application is targeting. Features requiring a later version will not be compiled into the application. The minimum value supported is "9.0.0".-->
    <target-player>11.1</target-player>
    <!-- tools-locale: specifies the locale used by the compiler when reporting errors and warnings.-->

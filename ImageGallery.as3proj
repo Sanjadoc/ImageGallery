@@ -52,12 +52,12 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <element path="lib\flexunit-4.1.0-8-as3_4.1.0.16076.swc" />
     <element path="lib\greensock.swc" />
     <element path="lib\MonsterDebugger.swc" />
-    <element path="lib\robotlegs-framework-v1.5.2.swc" />
     <element path="lib\as3-signals-v0.8.swc" />
     <element path="lib\signals-extension-SignalsCommandMap.swc" />
+    <element path="lib\flexunit-4.0-rc-1.swc" />
+    <element path="lib\robotlegs-framework-v1.5.2.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

@@ -28,12 +28,12 @@ package com.iomull.imageGallery
 		private function init(e:Event):void 
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
-			
+			//
 			MonsterDebugger.initialize(this);
-			
+			//
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
-			
+			//
 			context = new ImageGalleryContext(this, true);
 		}
 	}

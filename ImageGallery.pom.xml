@@ -7,7 +7,7 @@
          <groupId>com.iomull.imageGallery</groupId>
 		<artifactId>ImageGallery-parent</artifactId>
         <relativePath>./pom.xml</relativePath>
-        <version>1.08</version>
+        <version>1.09</version>
     </parent>
 
     <groupId>com.iomull.imageGallery</groupId>
@@ -42,39 +42,22 @@
 					<aggregate>true</aggregate>
 					<headlessServer>true</headlessServer>
 					<verboseStacktraces>true</verboseStacktraces>
-					<swfVersion>18</swfVersion>
+					<swfVersion>16</swfVersion>
 					<targetPlayer>${playerglobal.version}</targetPlayer>
-					<optimize>true</optimize>
-					<dumpConfigAttach>true</dumpConfigAttach>	
-                    <debug>false</debug>
-                    <as3>true</as3>
-                    <sourceFile>com/iomull/imageGallery/ImageGalleryApp.as</sourceFile>
-					<frames>
-                        <frame>
-                            <label>imageGallery</label>
-                            <classNames>
-                                <className>com.iomull.imageGallery.ImageGalleryApp</className>
-                            </classNames>
-                        </frame>
-                    </frames>
-                    <defines>
-                        <property>
-                            <name>CONFIG::debug</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>CONFIG::localurls</name>
-                            <value>false</value>
-                        </property>
-                    </defines>
 					<coverage>true</coverage>
 					<coverageProvider>cobertura</coverageProvider>
 					<coverageReportFormat>
 						<format>html</format>
 						<format>xml</format>
-					</coverageReportFormat>	
-					
-					
+					</coverageReportFormat>		
+                    <debug>false</debug>
+                    <as3>true</as3>
+                    <sourceFile>com/iomull/imageGallery/ImageGalleryApp.as</sourceFile>
+                    <optimize>true</optimize>
+					<dumpConfigAttach>true</dumpConfigAttach>
+					<includeTestFiles>
+                        <includeTestFile>tests/com/iomull/imageGallery/model/AllModelTestSuite</includeTestFile>
+                    </includeTestFiles>
                 </configuration>
 				
 				 <dependencies>
@@ -95,14 +78,6 @@
             <artifactId>flex-framework</artifactId>
             <version>${flex.sdk.version}</version>
             <type>pom</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.flexunit</groupId>
-            <artifactId>flexunit</artifactId>
-            <version>4.0-rc-1</version>
-            <type>swc</type>
-            <scope>test</scope>
         </dependency>
 		
 		<dependency>
@@ -141,12 +116,12 @@
         </dependency>
 		
 		<dependency>
-            <groupId>com.iomull.imageGallery</groupId>
-            <artifactId>monsterDebugger</artifactId>
-            <version>3.0</version>
-            <type>swc</type>
-        </dependency>
-		
+		  <groupId>com.adobe.flexunit</groupId>
+		  <artifactId>flexunit</artifactId>
+		  <version>4.0-rc-1</version>
+		  <type>swc</type>
+		</dependency>
+
 		</dependencies>
 		 <repositories>
 			<repository>

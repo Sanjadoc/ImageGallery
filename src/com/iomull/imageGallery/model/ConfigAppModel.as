@@ -20,7 +20,7 @@ package com.iomull.imageGallery.model
 		
 		public function ConfigAppModel() 
 		{
-		
+			
 		}
 		
 		public function parseXML(imageXML:XML): void
